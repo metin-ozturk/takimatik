@@ -16,6 +16,10 @@ struct ContentView: View {
     
     @State var downloadedEvents = [UserSpecificEvent]()
     
+    @State var isUserDetailsBeingPresented = false
+    
+    @State private var profilePhoto = Image("profilePhoto")
+    
     private let activityLabels = [
         ["Benim Etkinliklerim", Util.shared.hexStringToColor(hex: "#96261a")],
         ["Davet Edildiklerim",Util.shared.hexStringToColor(hex: "#626e85")],
@@ -30,18 +34,32 @@ struct ContentView: View {
                 NavigationLink(destination: LoginView(), isActive: self.$isShowingLoginView) { EmptyView() }.isDetailLink(false)
                 HStack {
                     Spacer()
-                    Image("profilePhoto")
+                    self.profilePhoto
                         .resizable()
-                        .renderingMode(.template)
-                        .foregroundColor(Util.shared.firstColor)
+                        .cornerRadius(30)
                         .frame(width: 60, height: 60, alignment: .center)
-                    Text("Metin Öztürk")
+                        .overlay(
+                                Circle()
+                                    .stroke(Util.shared.firstColor, lineWidth: 2.5)
+                                    .shadow(color: Util.shared.firstColor, radius: 2.5, x: 0, y: 0)
+                        )
+                    Text(self.userViewModel.user.name.isEmpty ? "Anonim" : self.userViewModel.user.name)
                     Spacer()
                 }
                 .padding(.all, 2.5)
                 .frame(width: 200, height: 70, alignment: .center)
                 .background(Util.shared.hexStringToColor(hex: "#87898a").opacity(0.3))
                 .cornerRadius(75, corners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight])
+                .onTapGesture {
+                    self.isUserDetailsBeingPresented = true
+                }
+                .sheet(isPresented: self.$isUserDetailsBeingPresented, onDismiss: {
+                    if let userImage = self.userViewModel.userImage {
+                        self.profilePhoto = Image(uiImage: userImage)
+                    }
+                }) {
+                    UserDetailView(isUserDetailViewBeingPresented: self.$isUserDetailsBeingPresented).environmentObject(self.userViewModel)
+                }
                 
                 Spacer()
                 
@@ -132,6 +150,10 @@ struct ContentView: View {
                         if let userSpecificEvent = userSpecificEvent {
                             self.downloadedEvents = userSpecificEvent
                         }
+                    }
+                    
+                    if let userImage = self.userViewModel.userImage {
+                        self.profilePhoto = Image(uiImage: userImage)
                     }
                     
             }

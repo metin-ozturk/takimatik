@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct UserSpecificEvent : Identifiable, Codable, Hashable {
+    let id = UUID()
+    
+    let eventID : String
+    let type : EventType
+    let title : String
+    let involvementStatus : EventParticipationStatus
+}

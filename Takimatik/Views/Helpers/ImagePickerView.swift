@@ -10,10 +10,8 @@ import Foundation
 import SwiftUI
 
 struct ImagePickerView : UIViewControllerRepresentable {
-    
     @Binding var isBeingPresented : Bool
-
-    @ObservedObject var createEventViewModel: CreateEventViewModel
+    @Binding var retrievedImage: UIImage?
     
 
     func updateUIViewController(_ uiViewController: ImagePickerView.UIViewControllerType, context: Context) {}
@@ -40,7 +38,7 @@ struct ImagePickerView : UIViewControllerRepresentable {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let selectedImage = info[.originalImage] as? UIImage {
                 DispatchQueue.main.async {
-                    self.parent.createEventViewModel.selectedImage = selectedImage
+                    self.parent.retrievedImage = selectedImage
                 }
             }
             

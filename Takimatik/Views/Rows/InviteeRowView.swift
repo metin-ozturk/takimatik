@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct InviteeRowView: View {
+    
+    var invitee : Invitee
+    var isSelected: Bool
+    var action: () -> Void = {}
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: self.action) {
+            HStack {
+                Text("\(invitee.name)")
+                Divider()
+                Text("\(invitee.phoneNumber)")
+                if self.isSelected {
+                    Spacer()
+                    Image("checkmark")
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(Util.shared.thirdColor)
+                        .frame(width: 25, height: 25, alignment: .center)
+                }
+            }
+        }.buttonStyle(TMInviteeButtonStyle())
+            .frame(width: nil, height: 40, alignment: .leading)
     }
-}
-
-struct InviteeRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        InviteeRowView()
-    }
+    
 }

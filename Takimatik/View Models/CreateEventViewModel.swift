@@ -8,12 +8,27 @@
 
 import SwiftUI
 
-class CreatEventViewModel : ObservableObject {
-    @Published var selectedContacts: [Invitee]
-    @Published var selectedImage : Image?
+class CreateEventViewModel : ObservableObject {
+    @Published var event = Event(title: "", eventType: .Wedding, participationStatus: .Participated, latitude: "", longitude: "", startDate: "", endDate: "", image: "", founderPhoneNumber: "")
     
-    init(selectedContacts : [Invitee], selectedImage: Image?) {
+    @Published var selectedContacts: [Invitee]
+    @Published var selectedImage : UIImage?
+    
+    init(selectedContacts : [Invitee], selectedImage: UIImage?) {
         self.selectedContacts = selectedContacts
         self.selectedImage = selectedImage
     }
+    
+    func createEvent(completion: @escaping (Bool) -> Void) {
+        RemoteDataManager.makeRequest(requestUrl: "event", requestMethod: "POST", sentData: event) { (data, statusCode) in
+            completion(statusCode == 200)
+        }
+    }
+        
+    func clear() {
+        self.event = Event(title: "", eventType: .Wedding, participationStatus: .Participated, latitude: "", longitude: "", startDate: "", endDate: "", image: "", founderPhoneNumber: "")
+        selectedContacts = []
+        selectedImage = nil
+    }
+    
 }

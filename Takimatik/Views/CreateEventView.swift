@@ -19,7 +19,6 @@ struct CreateEventView: View {
     
     @ObservedObject var contactsManager = ContactsManager()
     
-
     @State private var rEventName : String = ""
     
     @State private var selectedStartDate = Date()
@@ -41,6 +40,11 @@ struct CreateEventView: View {
     @State var fieldsMissing = [String]()
     
     @State var rImage : Image? = nil
+    @State var retrievedImage : UIImage? = nil
+    
+    @State var tlAccount: String = ""
+    @State var grGoldAccount: String = ""
+    @State var quarterGoldAccount: String = ""
     
     var body: some View {
         GeometryReader { geometry in
@@ -51,6 +55,7 @@ struct CreateEventView: View {
                             Section(header: Text("Etkinlik Bilgileri")) {
                                 
                                 TextField("Etkinlik Adı", text: self.$rEventName)
+                                    
                                 
                                 Picker(selection: self.$selectedEventIdx, label: Text("Etkinlik Türü:")) {
                                     Text("Düğün").tag(1).font(Font.system(size: 17))
@@ -69,7 +74,6 @@ struct CreateEventView: View {
                             
                             Section(header: Text("Etkinlik Davetlileri")) {
                                 
-                                Group {
                                     if self.rContacts.count > 0 {
                                         ScrollView(.vertical, showsIndicators: false) {
                                             List(self.rContacts) { (invitee) in
@@ -88,30 +92,30 @@ struct CreateEventView: View {
                                         self.rContacts = self.createEventViewModel.selectedContacts
                                     }) {
                                         ContactPickerView(createEventViewModel: self.createEventViewModel, isShowing: self.$isShowingContactPickerView, initialContacts: self.contactsManager.rContacts)
-                                    }
+                                    }.buttonStyle(TMButtonStyle())
                                     
-                                    
-                                }
                             }
                             
                             Section(header: Text("Etkinlik Görseli")) {
                                 if self.rImage != nil {
                                     self.rImage!
                                         .resizable()
+                                        .aspectRatio(contentMode: .fill)
                                         .frame(height: 200, alignment: .center)
-                                        .aspectRatio(contentMode: .fit)
                                         .clipped()
                                         .cornerRadius(10)
                                 }
                                 
                                 Button(action: {
+                                    self.hideKeyboard()
                                     self.isShowingImagePicker.toggle()
                                 }) {
                                     Text("Galeriye Git")
                                 }.sheet(isPresented: self.$isShowingImagePicker, onDismiss: {
+                                    self.createEventViewModel.selectedImage = self.retrievedImage
                                     self.rImage = self.createEventViewModel.selectedImage != nil ? Image(uiImage: self.createEventViewModel.selectedImage!) : nil
                                 }) {
-                                    ImagePickerView(isBeingPresented: self.$isShowingImagePicker, createEventViewModel: self.createEventViewModel)
+                                    ImagePickerView(isBeingPresented: self.$isShowingImagePicker, retrievedImage: self.$retrievedImage)
                                 }.buttonStyle(TMButtonStyle())
 
                             }
@@ -133,6 +137,13 @@ struct CreateEventView: View {
                                 }
                                 .buttonStyle(TMButtonStyle())
                                 
+                            }
+                            
+                            Section(header: Text("Etkinlik Hesapları")) {
+                                TextField("TL Hesabı", text: self.$tlAccount)
+                                TextField("Gram Altın Hesabı", text: self.$grGoldAccount)
+                                TextField("Çeyrek Altın Hesabı", text: self.$quarterGoldAccount)
+
                             }
                             
                             

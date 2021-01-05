@@ -20,6 +20,7 @@ struct EventDetailView: View {
     
     @State private var isShowingCalendarAlert = false
     @State private var isLoading = false
+    @State private var isShowingDonationView = false
     
     var body: some View {
         BaseView(isLoading: isLoading) {
@@ -136,11 +137,35 @@ struct EventDetailView: View {
                         }.padding(.vertical, 0)
                     }.opacity(0.7)
                     
+                    VStack {
+                        Spacer()
+                        
+                        HStack {
+                            Button(action: {
+                                self.isShowingDonationView = true
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Takı Tak")
+                                    Spacer()
+                                }
+                            }
+                            .buttonStyle(TMButtonStyleInverted())
+                            .padding(.horizontal, 10)
+                            .sheet(isPresented: self.$isShowingDonationView, onDismiss: {
+                                print("Donation View Dismissed")
+                            }) {
+                                DonationView(isShowingDonationView: self.$isShowingDonationView)
+                            }
+
+                        }
+                    }
+
+                            
                 }
                 
                 
                 Spacer()
-                    
                     .navigationBarTitle(event.title)
                     .onAppear {
                         self.isLoading = true

@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import CoreLocation
+
+struct SelectedLocation: Equatable {
+    var coordinate : CLLocationCoordinate2D
+    var address : String
+    
+    static func == (lhs: SelectedLocation, rhs: SelectedLocation) -> Bool {
+        return lhs.coordinate.latitude == rhs.coordinate.latitude && lhs.coordinate.longitude == rhs.coordinate.longitude
+    }
+}

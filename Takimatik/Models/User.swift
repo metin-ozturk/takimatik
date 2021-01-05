@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct User : Identifiable, Hashable, Equatable, Codable {
+    var id : String { phoneNumber }
+    var phoneNumber : String
+    var pin : String
+    
+    var rememberToken: String = ""
+    var name = ""
+    var image = ""
+    var involvedEvents = [UserSpecificEvent]()
+}

@@ -3,19 +3,64 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4985BFB68417EDC48EA881 /* Pods_Takimatik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2BA4946F059A5D23C00063 /* Pods_Takimatik.framework */; };
+		C81314C724E92A7600445AB7 /* DonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81314C624E92A7600445AB7 /* DonationView.swift */; };
+		C81314CA24E93B2F00445AB7 /* DonationTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81314C924E93B2F00445AB7 /* DonationTypeView.swift */; };
+		C817A56E24EC303600FB48FC /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C817A56D24EC303600FB48FC /* KeyboardResponder.swift */; };
+		C817A57024EC73FC00FB48FC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C817A56F24EC73FC00FB48FC /* StoreKit.framework */; };
+		C8803AAC24D55CB00063CAD3 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8803AAB24D55CB00063CAD3 /* RemoteDataManager.swift */; };
+		C8803AAE24D574C60063CAD3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8803AAD24D574C60063CAD3 /* LoginView.swift */; };
+		C8803AB024D5754C0063CAD3 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8803AAF24D5754C0063CAD3 /* IntroView.swift */; };
+		C8803AB224D5886B0063CAD3 /* TMTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8803AB124D5886B0063CAD3 /* TMTextFieldStyle.swift */; };
+		C8AF531F24DEEF2500491F09 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF531E24DEEF2500491F09 /* UserDetailView.swift */; };
 		C8AF88EB24CC248400B7B33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF88EA24CC248400B7B33F /* AppDelegate.swift */; };
 		C8AF88ED24CC248400B7B33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF88EC24CC248400B7B33F /* SceneDelegate.swift */; };
 		C8AF88EF24CC248400B7B33F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF88EE24CC248400B7B33F /* ContentView.swift */; };
 		C8AF88F124CC248600B7B33F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AF88F024CC248600B7B33F /* Assets.xcassets */; };
 		C8AF88F424CC248600B7B33F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AF88F324CC248600B7B33F /* Preview Assets.xcassets */; };
 		C8AF88F724CC248600B7B33F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8AF88F524CC248600B7B33F /* LaunchScreen.storyboard */; };
+		C8AF890024CC344D00B7B33F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF88FF24CC344D00B7B33F /* Event.swift */; };
+		C8AF890324CC3F4F00B7B33F /* EventFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF890224CC3F4F00B7B33F /* EventFeedView.swift */; };
+		C8AF890624CC5CA800B7B33F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF890524CC5CA800B7B33F /* Util.swift */; };
+		C8AF890824CC752E00B7B33F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF890724CC752E00B7B33F /* Extensions.swift */; };
+		C8AF890A24CC826900B7B33F /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF890924CC826900B7B33F /* CreateEventView.swift */; };
+		C8AF891024CCCFF000B7B33F /* Invitee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AF890F24CCCFEF00B7B33F /* Invitee.swift */; };
+		C8B45BC724DD841A00237018 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B45BC624DD841A00237018 /* EventDetailViewModel.swift */; };
+		C8B45BC924DD847300237018 /* UserSpecificEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B45BC824DD847300237018 /* UserSpecificEvent.swift */; };
+		C8CA5B4024D0A7F4008B0F5F /* ContactPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA5B3F24D0A7F4008B0F5F /* ContactPickerView.swift */; };
+		C8CA5B4324D0B171008B0F5F /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA5B4224D0B171008B0F5F /* CreateEventViewModel.swift */; };
+		C8CA5B4524D1AB71008B0F5F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA5B4424D1AB71008B0F5F /* UserViewModel.swift */; };
+		C8CA5B4724D1ABFE008B0F5F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA5B4624D1ABFE008B0F5F /* User.swift */; };
+		C8CA5B4924D2EE15008B0F5F /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CA5B4824D2EE15008B0F5F /* EventDetailView.swift */; };
+		C8CC46E324CD97E300D11B0C /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46E224CD97E300D11B0C /* ImagePickerView.swift */; };
+		C8CC46E624CDA17C00D11B0C /* TMButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46E524CDA17C00D11B0C /* TMButtonStyle.swift */; };
+		C8CC46E824CDB70E00D11B0C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46E724CDB70E00D11B0C /* MapView.swift */; };
+		C8CC46EC24CDC8A300D11B0C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46EB24CDC8A300D11B0C /* DataManager.swift */; };
+		C8CC46EE24CF0DE800D11B0C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46ED24CF0DE800D11B0C /* LoadingView.swift */; };
+		C8CC46F024CF15A100D11B0C /* SelectedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46EF24CF15A100D11B0C /* SelectedLocation.swift */; };
+		C8CC46F424CF33D700D11B0C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46F324CF33D700D11B0C /* BaseView.swift */; };
+		C8CC46F724CF4DB800D11B0C /* InviteeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46F624CF4DB800D11B0C /* InviteeRowView.swift */; };
+		C8CC46F924CF6B1F00D11B0C /* TMInviteeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46F824CF6B1F00D11B0C /* TMInviteeButtonStyle.swift */; };
+		C8CC46FD24D00B6F00D11B0C /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC46FC24D00B6F00D11B0C /* ContactsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D70554B2EB13A8982C43B8C /* Pods-Takimatik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takimatik.debug.xcconfig"; path = "Target Support Files/Pods-Takimatik/Pods-Takimatik.debug.xcconfig"; sourceTree = "<group>"; };
+		43F931A4832F7F0CE461AC0C /* Pods-Takimatik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Takimatik.release.xcconfig"; path = "Target Support Files/Pods-Takimatik/Pods-Takimatik.release.xcconfig"; sourceTree = "<group>"; };
+		5B2BA4946F059A5D23C00063 /* Pods_Takimatik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Takimatik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81314C624E92A7600445AB7 /* DonationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationView.swift; sourceTree = "<group>"; };
+		C81314C924E93B2F00445AB7 /* DonationTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTypeView.swift; sourceTree = "<group>"; };
+		C817A56D24EC303600FB48FC /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		C817A56F24EC73FC00FB48FC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C8803AAB24D55CB00063CAD3 /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
+		C8803AAD24D574C60063CAD3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C8803AAF24D5754C0063CAD3 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		C8803AB124D5886B0063CAD3 /* TMTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMTextFieldStyle.swift; sourceTree = "<group>"; };
+		C8AF531E24DEEF2500491F09 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		C8AF88E724CC248400B7B33F /* Takimatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Takimatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8AF88EA24CC248400B7B33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8AF88EC24CC248400B7B33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +69,29 @@
 		C8AF88F324CC248600B7B33F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8AF88F624CC248600B7B33F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8AF88F824CC248600B7B33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8AF88FF24CC344D00B7B33F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C8AF890224CC3F4F00B7B33F /* EventFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedView.swift; sourceTree = "<group>"; };
+		C8AF890524CC5CA800B7B33F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		C8AF890724CC752E00B7B33F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C8AF890924CC826900B7B33F /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		C8AF890F24CCCFEF00B7B33F /* Invitee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitee.swift; sourceTree = "<group>"; };
+		C8B45BC624DD841A00237018 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		C8B45BC824DD847300237018 /* UserSpecificEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSpecificEvent.swift; sourceTree = "<group>"; };
+		C8CA5B3F24D0A7F4008B0F5F /* ContactPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerView.swift; sourceTree = "<group>"; };
+		C8CA5B4224D0B171008B0F5F /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
+		C8CA5B4424D1AB71008B0F5F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C8CA5B4624D1ABFE008B0F5F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C8CA5B4824D2EE15008B0F5F /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		C8CC46E224CD97E300D11B0C /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		C8CC46E524CDA17C00D11B0C /* TMButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMButtonStyle.swift; sourceTree = "<group>"; };
+		C8CC46E724CDB70E00D11B0C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C8CC46EB24CDC8A300D11B0C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C8CC46ED24CF0DE800D11B0C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C8CC46EF24CF15A100D11B0C /* SelectedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLocation.swift; sourceTree = "<group>"; };
+		C8CC46F324CF33D700D11B0C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C8CC46F624CF4DB800D11B0C /* InviteeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteeRowView.swift; sourceTree = "<group>"; };
+		C8CC46F824CF6B1F00D11B0C /* TMInviteeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMInviteeButtonStyle.swift; sourceTree = "<group>"; };
+		C8CC46FC24D00B6F00D11B0C /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +99,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4985BFB68417EDC48EA881 /* Pods_Takimatik.framework in Frameworks */,
+				C817A57024EC73FC00FB48FC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B0435023FA8CB1578DAD59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C817A56F24EC73FC00FB48FC /* StoreKit.framework */,
+				5B2BA4946F059A5D23C00063 /* Pods_Takimatik.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAFA04A456B8EF103DA108FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D70554B2EB13A8982C43B8C /* Pods-Takimatik.debug.xcconfig */,
+				43F931A4832F7F0CE461AC0C /* Pods-Takimatik.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C81314C824E93B0500445AB7 /* DonationViews */ = {
+			isa = PBXGroup;
+			children = (
+				C81314C624E92A7600445AB7 /* DonationView.swift */,
+				C81314C924E93B2F00445AB7 /* DonationTypeView.swift */,
+			);
+			path = DonationViews;
+			sourceTree = "<group>";
+		};
+		C817A56824EAFB7200FB48FC /* Keyboard Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				C817A56D24EC303600FB48FC /* KeyboardResponder.swift */,
+			);
+			path = "Keyboard Handlers";
+			sourceTree = "<group>";
+		};
+		C8AF531D24DEEE2200491F09 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C817A56824EAFB7200FB48FC /* Keyboard Handlers */,
+				C8CC46E224CD97E300D11B0C /* ImagePickerView.swift */,
+				C8CC46E724CDB70E00D11B0C /* MapView.swift */,
+				C8CC46ED24CF0DE800D11B0C /* LoadingView.swift */,
+				C8CC46F324CF33D700D11B0C /* BaseView.swift */,
+				C8CA5B3F24D0A7F4008B0F5F /* ContactPickerView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C8AF88DE24CC248400B7B33F = {
 			isa = PBXGroup;
 			children = (
 				C8AF88E924CC248400B7B33F /* Takimatik */,
 				C8AF88E824CC248400B7B33F /* Products */,
+				BAFA04A456B8EF103DA108FE /* Pods */,
+				44B0435023FA8CB1578DAD59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +178,10 @@
 			children = (
 				C8AF88EA24CC248400B7B33F /* AppDelegate.swift */,
 				C8AF88EC24CC248400B7B33F /* SceneDelegate.swift */,
-				C8AF88EE24CC248400B7B33F /* ContentView.swift */,
+				C8AF890424CC5C8200B7B33F /* Utilities */,
+				C8AF890124CC3F1900B7B33F /* Views */,
+				C8AF88FE24CC343A00B7B33F /* Models */,
+				C8CA5B4124D0B13E008B0F5F /* View Models */,
 				C8AF88F024CC248600B7B33F /* Assets.xcassets */,
 				C8AF88F524CC248600B7B33F /* LaunchScreen.storyboard */,
 				C8AF88F824CC248600B7B33F /* Info.plist */,
@@ -75,6 +198,76 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C8AF88FE24CC343A00B7B33F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8AF88FF24CC344D00B7B33F /* Event.swift */,
+				C8AF890F24CCCFEF00B7B33F /* Invitee.swift */,
+				C8CC46EF24CF15A100D11B0C /* SelectedLocation.swift */,
+				C8CA5B4624D1ABFE008B0F5F /* User.swift */,
+				C8B45BC824DD847300237018 /* UserSpecificEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C8AF890124CC3F1900B7B33F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8AF531D24DEEE2200491F09 /* Helpers */,
+				C8CC46F524CF4D9300D11B0C /* Rows */,
+				C8CC46E424CDA16D00D11B0C /* Styles */,
+				C81314C824E93B0500445AB7 /* DonationViews */,
+				C8AF88EE24CC248400B7B33F /* ContentView.swift */,
+				C8AF890924CC826900B7B33F /* CreateEventView.swift */,
+				C8CA5B4824D2EE15008B0F5F /* EventDetailView.swift */,
+				C8AF890224CC3F4F00B7B33F /* EventFeedView.swift */,
+				C8803AAD24D574C60063CAD3 /* LoginView.swift */,
+				C8803AAF24D5754C0063CAD3 /* IntroView.swift */,
+				C8AF531E24DEEF2500491F09 /* UserDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8AF890424CC5C8200B7B33F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C8AF890524CC5CA800B7B33F /* Util.swift */,
+				C8AF890724CC752E00B7B33F /* Extensions.swift */,
+				C8CC46EB24CDC8A300D11B0C /* DataManager.swift */,
+				C8CC46FC24D00B6F00D11B0C /* ContactsManager.swift */,
+				C8803AAB24D55CB00063CAD3 /* RemoteDataManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C8CA5B4124D0B13E008B0F5F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA5B4224D0B171008B0F5F /* CreateEventViewModel.swift */,
+				C8CA5B4424D1AB71008B0F5F /* UserViewModel.swift */,
+				C8B45BC624DD841A00237018 /* EventDetailViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		C8CC46E424CDA16D00D11B0C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				C8CC46E524CDA17C00D11B0C /* TMButtonStyle.swift */,
+				C8CC46F824CF6B1F00D11B0C /* TMInviteeButtonStyle.swift */,
+				C8803AB124D5886B0063CAD3 /* TMTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		C8CC46F524CF4D9300D11B0C /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				C8CC46F624CF4DB800D11B0C /* InviteeRowView.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8AF88FB24CC248600B7B33F /* Build configuration list for PBXNativeTarget "Takimatik" */;
 			buildPhases = (
+				BABA34B1E3C2ABBD42E9B39E /* [CP] Check Pods Manifest.lock */,
 				C8AF88E324CC248400B7B33F /* Sources */,
 				C8AF88E424CC248400B7B33F /* Frameworks */,
 				C8AF88E524CC248400B7B33F /* Resources */,
+				D2BB5621DD894DBF1F0AD74D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,14 +336,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BABA34B1E3C2ABBD42E9B39E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Takimatik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BB5621DD894DBF1F0AD74D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takimatik/Pods-Takimatik-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Takimatik/Pods-Takimatik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Takimatik/Pods-Takimatik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8AF88E324CC248400B7B33F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8AF890324CC3F4F00B7B33F /* EventFeedView.swift in Sources */,
+				C8CC46F924CF6B1F00D11B0C /* TMInviteeButtonStyle.swift in Sources */,
+				C8CC46E824CDB70E00D11B0C /* MapView.swift in Sources */,
+				C8AF890624CC5CA800B7B33F /* Util.swift in Sources */,
+				C81314C724E92A7600445AB7 /* DonationView.swift in Sources */,
+				C817A56E24EC303600FB48FC /* KeyboardResponder.swift in Sources */,
+				C8803AB224D5886B0063CAD3 /* TMTextFieldStyle.swift in Sources */,
+				C8AF890A24CC826900B7B33F /* CreateEventView.swift in Sources */,
+				C8CC46F024CF15A100D11B0C /* SelectedLocation.swift in Sources */,
+				C8CC46E624CDA17C00D11B0C /* TMButtonStyle.swift in Sources */,
+				C8CC46EE24CF0DE800D11B0C /* LoadingView.swift in Sources */,
+				C8CA5B4924D2EE15008B0F5F /* EventDetailView.swift in Sources */,
+				C8CC46F724CF4DB800D11B0C /* InviteeRowView.swift in Sources */,
+				C8803AAE24D574C60063CAD3 /* LoginView.swift in Sources */,
 				C8AF88EB24CC248400B7B33F /* AppDelegate.swift in Sources */,
+				C8CA5B4524D1AB71008B0F5F /* UserViewModel.swift in Sources */,
+				C8CA5B4324D0B171008B0F5F /* CreateEventViewModel.swift in Sources */,
+				C8B45BC924DD847300237018 /* UserSpecificEvent.swift in Sources */,
+				C8CC46E324CD97E300D11B0C /* ImagePickerView.swift in Sources */,
+				C81314CA24E93B2F00445AB7 /* DonationTypeView.swift in Sources */,
 				C8AF88ED24CC248400B7B33F /* SceneDelegate.swift in Sources */,
+				C8803AAC24D55CB00063CAD3 /* RemoteDataManager.swift in Sources */,
+				C8CC46FD24D00B6F00D11B0C /* ContactsManager.swift in Sources */,
+				C8AF890024CC344D00B7B33F /* Event.swift in Sources */,
 				C8AF88EF24CC248400B7B33F /* ContentView.swift in Sources */,
+				C8CA5B4024D0A7F4008B0F5F /* ContactPickerView.swift in Sources */,
+				C8CC46EC24CDC8A300D11B0C /* DataManager.swift in Sources */,
+				C8AF890824CC752E00B7B33F /* Extensions.swift in Sources */,
+				C8803AB024D5754C0063CAD3 /* IntroView.swift in Sources */,
+				C8AF891024CCCFF000B7B33F /* Invitee.swift in Sources */,
+				C8AF531F24DEEF2500491F09 /* UserDetailView.swift in Sources */,
+				C8CC46F424CF33D700D11B0C /* BaseView.swift in Sources */,
+				C8CA5B4724D1ABFE008B0F5F /* User.swift in Sources */,
+				C8B45BC724DD841A00237018 /* EventDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,19 +550,23 @@
 		};
 		C8AF88FC24CC248600B7B33F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D70554B2EB13A8982C43B8C /* Pods-Takimatik.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = takimatikIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Takimatik/Preview Content\"";
-				DEVELOPMENT_TEAM = Z9B4E6J3A8;
+				DEVELOPMENT_TEAM = DV59GNL592;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Takimatik/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abplus.Takimatik;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jora.takimatik;
+				PRODUCT_NAME = Takimatik;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,19 +574,23 @@
 		};
 		C8AF88FD24CC248600B7B33F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F931A4832F7F0CE461AC0C /* Pods-Takimatik.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = takimatikIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Takimatik/Preview Content\"";
 				DEVELOPMENT_TEAM = Z9B4E6J3A8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Takimatik/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abplus.Takimatik;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jora.takimatik;
+				PRODUCT_NAME = Takimatik;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -24,7 +24,7 @@ struct LoginView : View {
         BaseView(isLoading: isLoading) {
             VStack {
                 NavigationLink(destination: ContentView(), isActive: self.$isContentViewBeingShowed) { EmptyView() }
-                                
+                
                 Spacer()
                 
                 Image("takimatik")
@@ -33,7 +33,7 @@ struct LoginView : View {
                     .aspectRatio(contentMode: .fit)
                     .padding(0)
                     .padding(.top, -75)
-                                
+                
                 VStack {
                     HStack {
                         Image(isGettingPhoneNumber ? "phone" : "pin")
@@ -57,8 +57,7 @@ struct LoginView : View {
                             self.userViewModel.getPin { (rData) in
                                 self.isLoading = false
                                 
-                                if let rData = rData {
-                                    print(String(data: rData, encoding: .utf8) ?? "")
+                                if rData != nil {
                                     self.isGettingPhoneNumber.toggle()
                                 }
                             }
